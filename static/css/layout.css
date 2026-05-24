@@ -1,0 +1,38 @@
+/**
+ * layout.css — WhaleX Prime
+ * الهيكل العام والشاشات
+ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent }
+html, body { height:100%; width:100%; overflow:hidden; background:var(--bg); color:var(--text); font-family:var(--font); font-size:14px }
+#shell { position:fixed; inset:0; display:none; flex-direction:column }
+#shell.on { display:flex }
+#ob { position:fixed; inset:0; background:var(--bg); z-index:2000; display:none; flex-direction:column }
+/* TOPBAR */
+.topbar { height:var(--topbar-h); flex-shrink:0; display:flex; align-items:center; gap:8px; padding:0 12px; background:rgba(2,4,8,.98); border-bottom:1px solid var(--border2); z-index:100 }
+.logo { font-size:17px; font-weight:900; background:linear-gradient(90deg,var(--neon),var(--ai)); -webkit-background-clip:text; -webkit-text-fill-color:transparent }
+.logo-sub { font-size:9px; color:var(--ai); font-weight:700 }
+/* TICKER */
+.ticker { height:var(--ticker-h); overflow:hidden; flex-shrink:0; background:rgba(4,8,16,.95); border-bottom:1px solid var(--border); position:relative }
+#tk { display:flex; align-items:center; height:100%; position:absolute; white-space:nowrap; will-change:transform }
+.ti { display:inline-flex; align-items:center; gap:4px; padding:0 12px; border-right:1px solid var(--border); height:100%; cursor:pointer; flex-shrink:0 }
+.ts,.tp { font-size:10px; font-weight:700; font-family:var(--mono) }
+.tc { font-size:9px; font-weight:700 }
+.up { color:var(--green) } .dn { color:var(--red) }
+/* SCREENS */
+.screens { flex:1; overflow:hidden; position:relative }
+.screen { position:absolute; inset:0; display:none; flex-direction:column; overflow:hidden }
+.screen.show { display:flex }
+.scr-body { flex:1; overflow-y:scroll; -webkit-overflow-scrolling:touch; padding-bottom:calc(var(--bnav-h) + 12px) }
+.scr-body::-webkit-scrollbar { display:none }
+/* BOTTOM NAV */
+.bnav { height:var(--bnav-h); flex-shrink:0; display:flex; background:rgba(2,4,8,.98); border-top:1px solid var(--border2); padding-bottom:env(safe-area-inset-bottom) }
+.ni { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; cursor:pointer }
+.ni svg { transition:filter .2s }
+.ni-lbl { font-size:10px; color:var(--text3); font-weight:700; transition:color .2s }
+.ni.on .ni-lbl { color:var(--neon) }
+.ni.on svg { filter:drop-shadow(0 0 4px var(--neon)) }
+.ni-orb-wrap { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; cursor:pointer; position:relative; top:-10px }
+.ni-orb { width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#0090c8,var(--ai)); display:flex; align-items:center; justify-content:center; box-shadow:0 0 18px rgba(0,245,255,.4) }
+/* ADMIN */
+#adm { position:fixed; inset:0; background:var(--bg); z-index:1500; display:none; flex-direction:column; overflow:hidden }
+#adm.on { display:flex }

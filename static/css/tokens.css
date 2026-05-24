@@ -1,0 +1,34 @@
+/**
+ * tokens.css — WhaleX Prime
+ * ══════════════════════════════════════
+ * المتغيرات والألوان — عدّل هنا فقط.
+ * ══════════════════════════════════════
+ */
+:root {
+  /* Colors */
+  --bg:      #020408;
+  --bg2:     #040810;
+  --card:    #08111f;
+  --border:  #0d2240;
+  --border2: #1a3a6a;
+  --neon:    #00f5ff;
+  --ai:      #7c3aff;
+  --green:   #00ff88;
+  --red:     #ff2255;
+  --gold:    #ffcc00;
+  --text:    #c8e8ff;
+  --text2:   #5a88c8;
+  --text3:   #2a4a7a;
+
+  /* Spacing */
+  --radius:  14px;
+
+  /* Heights */
+  --topbar-h: 56px;
+  --ticker-h: 26px;
+  --bnav-h:   62px;
+
+  /* Fonts */
+  --font: -apple-system, system-ui, 'Segoe UI', sans-serif;
+  --mono: 'Courier New', monospace;
+}
